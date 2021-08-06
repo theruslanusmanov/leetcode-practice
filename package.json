@@ -1,0 +1,23 @@
+{
+  "name": "training",
+  "version": "1.0.0",
+  "description": "\"# training\"",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/theruslanusmanov/training.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/theruslanusmanov/training/issues"
+  },
+  "homepage": "https://github.com/theruslanusmanov/training#readme",
+  "devDependencies": {
+    "jest": "^27.0.6"
+  }
+}
