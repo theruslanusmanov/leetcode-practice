@@ -1,1 +1,2 @@
-"# training" 
+# Training
+Just training skills 🙂
