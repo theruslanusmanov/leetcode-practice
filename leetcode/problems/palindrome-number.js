@@ -3,41 +3,19 @@
  * @return {boolean}
  */
 var isPalindrome = function(x) {
+  if (x < 0 || (x % 10 === 0 && x !== 0)) {
+    return false;
+  }
 
+  let revertedNumber = 0;
+  while(x > revertedNumber) {
+    revertedNumber = revertedNumber * 10 + x % 10;
+    x /= 10;
+  }
+
+  return x === revertedNumber || x === revertedNumber / 10;
 };
 
-describe('isPalindrome', () => {
-  /**
-   * Input: x = 121
-   * Output: true
-   */
-  it('should return true', () => {
-    expect(isPalindrome(121)).toBe(true)
-  })
+var isPalindrome = (x) => String(x) === String(x).split("").reverse().join("");
 
-  /**
-   * Input: x = -121
-   * Output: false
-   * Explanation: From left to right, it reads -121. From right to left, it becomes 121-. Therefore it is not a palindrome.
-   */
-  it('should return false', () => {
-    expect(isPalindrome(-121)).toBe(false)
-  })
-
-  /**
-   * Input: x = 10
-   * Output: false
-   * Explanation: Reads 01 from right to left. Therefore it is not a palindrome.
-   */
-  it('should return correct output', () => {
-    expect(isPalindrome(120)).toBe(21)
-  })
-
-  /**
-   * Input: x = -101
-   * Output: false
-   */
-  it('should return correct output', () => {
-    expect(isPalindrome(-101)).toBe(false)
-  })
-})
+module.exports = isPalindrome;
